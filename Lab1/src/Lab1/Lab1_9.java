@@ -1,7 +1,7 @@
 package Lab1;
 import java.util.Scanner;
-public class Lab1_8 {
-	
+public class Lab1_9 {
+
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -12,14 +12,13 @@ public class Lab1_8 {
 		for (int i = 0; i < number.length; i++) {
 			number[i] = input.nextInt();
 		}
-		
-		int max = number[0];
-		for (int i = 1; i < number.length; i++) {
-			if (number[i] > max) {
-				max = number[i];
-			}
+		int sum = 0;
+			for(int i = 0; i < number.length; i++) {
+				sum += number[i];
 		}
-		System.out.print(max);
+		double average = (double) sum / size;
+		
+		System.out.print(average);
 	}
 
 }
