@@ -10,6 +10,8 @@ public class Lab2_4 {
 		
 		Student4 st = new Student4(inputName, inputMin, inputFinal);
 		st.diplay();
+
+		scanner.close();
 	}
 }
 
@@ -18,16 +20,14 @@ class Student4{
 	int midtermScore;
 	int finalScore;
 	
-	Student4(String n, int mid, int fin) {
-		name = n;
-		midtermScore = mid;
-		finalScore = fin;
+Student4(String n, int mid, int fin) {
+	name = n;
+	midtermScore = mid;
+	finalScore = fin;
 	}
-	
 	double gpa() {
 		return (midtermScore + finalScore) / 2.0;
 	}
-	
 	void diplay() {
 		double avg = gpa();
 		
@@ -40,5 +40,4 @@ class Student4{
 			System.out.print("Status: Fail");
 		}
 	}
-	
 }
