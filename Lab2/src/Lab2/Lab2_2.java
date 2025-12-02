@@ -1,23 +1,27 @@
 package Lab2;
 import java.util.Scanner;
-public class Lab2_1 {
+public class Lab2_2 {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String inputId = scanner.nextLine();
 		String inputName = scanner.nextLine();
 		
-		Student1 st = new Student1();
-		st.StudentId = inputId;
+		Student2 st = new Student2();
+		st.studentId = inputId;
 		st.name = inputName;
-		
-		System.out.println(st.StudentId);
-		System.out.println(st.name);
+		st.displayInfo();
 		
 		scanner.close();
 	}
 }
-class Student1{
-	String StudentId;
+class Student2{
+	String studentId;
 	String name;
+	
+	void displayInfo() {
+		System.out.println(studentId);
+		System.out.println(name);
+	}
 }
+	
