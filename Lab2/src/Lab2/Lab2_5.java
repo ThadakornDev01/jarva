@@ -14,7 +14,6 @@ public class Lab2_5 {
 		
 		scanner.close();
 	}
-
 }
 
 class Rectangle{
@@ -33,4 +32,5 @@ class Rectangle{
 	double getPerimeter() {
 		return 2 * (Width + Heihgt);
 	}
+	
 }
