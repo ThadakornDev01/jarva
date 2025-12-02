@@ -10,8 +10,8 @@ public class Lab2_2 {
 		Student2 st = new Student2();
 		st.studentId = inputId;
 		st.name = inputName;
-		st.displayInfo();
 		
+		st.displayInfo();
 		scanner.close();
 	}
 }
@@ -19,9 +19,9 @@ class Student2{
 	String studentId;
 	String name;
 	
-	void displayInfo() {
-		System.out.println(studentId);
-		System.out.println(name);
+void displayInfo() {
+	System.out.println(studentId);
+	System.out.println(name);
 	}
 }
 	
