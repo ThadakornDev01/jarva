@@ -19,36 +19,35 @@ class Product {
 			items[itemCount] = p;
 			itemCount++;
 		}
-
-		double calculateTotalPrice() {
-			double total = 0;
-			for (int i = 0; i < itemCount; i++) {
-				total += items[i].price;
+			double calculateTotalPrice() {
+				double total = 0;
+				for (int i = 0; i < itemCount; i++) {
+					total += items[i].price;
+				}
+				return total;
 			}
-			return total;
 		}
-	}
 
-		public class Lab2_10 {
-			public static void main(String[] args) {
-				Scanner scanner = new Scanner(System.in);
-				int n = scanner.nextInt();
-				scanner.nextLine();
-
-				ShoppingCart cart = new ShoppingCart();
-
-				for (int i = 0; i < n; i++) {
-					String name = scanner.nextLine();
-					double price = scanner.nextDouble();
+			public class Lab2_10 {
+				public static void main(String[] args) {
+					Scanner scanner = new Scanner(System.in);
+					int n = scanner.nextInt();
 					scanner.nextLine();
 
-					Product p = new Product(name, price);
-					cart.addProduct(p);
+					ShoppingCart cart = new ShoppingCart();
+
+					for (int i = 0; i < n; i++) {
+						String name = scanner.nextLine();
+						double price = scanner.nextDouble();
+						scanner.nextLine();
+					
+						Product p = new Product(name, price);
+						cart.addProduct(p);
+					}
+
+					System.out.println(cart.calculateTotalPrice());
+
+					scanner.close();
 				}
 
-				System.out.println(cart.calculateTotalPrice());
-
-				scanner.close();
 			}
-
-		}
