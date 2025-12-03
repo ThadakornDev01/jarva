@@ -5,9 +5,9 @@ class Product {
     String name;
     double price;
 
-    Product(String n, double p) {
-        name = n;
-        price = p;
+    Product(String na, double pr) {
+        name = na;
+        price = pr;
     }
 }
 
@@ -15,16 +15,16 @@ class Product {
 		Product[] items = new Product[10];
 		int itemCount = 0;
 
-		void addProduct(Product p) {
-			items[itemCount] = p;
+		void addProduct(Product pr) {
+			items[itemCount] = pr;
 			itemCount++;
 		}
-			double calculateTotalPrice() {
-				double total = 0;
-				for (int i = 0; i < itemCount; i++) {
-					total += items[i].price;
-				}
-				return total;
+		double calculateTotalPrice() {
+			double total = 0;
+			for (int i = 0; i < itemCount; i++) {
+				total += items[i].price;
+			}
+			return total;
 			}
 		}
 
