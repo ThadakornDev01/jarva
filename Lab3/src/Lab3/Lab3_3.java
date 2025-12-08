@@ -13,7 +13,9 @@ class User2{
 	}
 	
 	public void setPassword(String newPassword) {
-		if (newPassword.length() >= 8) {  //.length คือการตรวจคำ
+		
+		//.length คือการตรวจคำ
+		if (newPassword.length() >= 8) {
 			this.password = newPassword;
 			System.out.println("Password updated");
 		}
@@ -22,15 +24,23 @@ class User2{
 		}
 	}
 }
+
 public class Lab3_3 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		String initialPassword = scanner.nextLine();	//รับรหัสผ่านเริ่มต้น
-		String updatedPassword = scanner.nextLine();	//รับรหัสผ่านใหม่ที่ต้องการเปลี่ยน
+		//รับรหัสผ่านเริ่มต้น
+		String initialPassword = scanner.nextLine();
 		
-		User2 user = new User2(initialPassword); //สร้าง Object User ด้วยรหัสผ่านเริ่มต้น
-		user.setPassword(updatedPassword); //เรียก setPassword
+		//รับรหัสผ่านใหม่ที่ต้องการเปลี่ยน
+		String updatedPassword = scanner.nextLine();
+		
+		User2 user = new User2(initialPassword);
+		
+		//สร้าง Object User ด้วยรหัสผ่านเริ่มต้น
+		user.setPassword(updatedPassword);
+		
+		//เรียก setPassword
 		System.out.println(user.getPassword());
 		
 		scanner.close();

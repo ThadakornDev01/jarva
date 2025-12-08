@@ -4,7 +4,8 @@ import java.util.Scanner;
 class Player{
 	private int score;
 	
-	Player(int score){ //Constructor รับค่าเริ่มต้น
+	//Constructor รับค่าเริ่มต้น
+	Player(int score){
 		this.score = score;
 	}
 	
@@ -21,11 +22,16 @@ public class Lab3_2 {
 		Scanner scanner = new Scanner(System.in);
 		
 		int initialScore = scanner.nextInt();
+		
 		int updatedScore = scanner.nextInt();
 		
+		
 		Player Py = new Player(initialScore);
-		Py.setScore(updatedScore); //เรียกใช้เมธอด setScore() เพื่ออัปเดตคะแนน
+		
+		//เรียกใช้เมธอด setScore() เพื่ออัปเดตคะแนน
+		Py.setScore(updatedScore);
 		System.out.println(Py.getScore());
+		
 		
 		scanner.close();
 	}
