@@ -15,9 +15,7 @@ class Player{
 	public void setScore(int newScore) {
 		this.score = newScore;
 	}
-	
 }
-
 public class Lab3_2 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -31,5 +29,4 @@ public class Lab3_2 {
 		
 		scanner.close();
 	}
-
 }
