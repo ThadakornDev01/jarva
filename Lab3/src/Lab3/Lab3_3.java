@@ -1,48 +1,40 @@
 package Lab3;
 import java.util.Scanner;
 
-class User2{
-	private String password;
-			
-	User2(String password){
-		this.password = password;
-	}
-	
-	public String getPassword() {
-		return this.password;
-	}
-	
-	public void setPassword(String newPassword) {
-		
-		//.length คือการตรวจคำ
-		if (newPassword.length() >= 8) {
-			this.password = newPassword;
-			System.out.println("Password updated");
-		}
-		else {
-			System.out.println("Password is too short.");
-		}
-	}
-}
+class User2 {
+    private String password;
 
+    public User2(String initialPassword) {
+        this.password = initialPassword;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String newPassword) {
+        if (newPassword.length() >= 8) {
+            this.password = newPassword;
+            System.out.println("Password updated.");
+        } else {
+            System.out.println("Password is too short.");
+        }
+    }
+}
 public class Lab3_3 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		
-		//รับรหัสผ่านเริ่มต้น
-		String initialPassword = scanner.nextLine();
-		
-		//รับรหัสผ่านใหม่ที่ต้องการเปลี่ยน
-		String updatedPassword = scanner.nextLine();
-		
-		User2 user = new User2(initialPassword);
-		
-		//สร้าง Object User ด้วยรหัสผ่านเริ่มต้น
-		user.setPassword(updatedPassword);
-		
-		//เรียก setPassword
-		System.out.println(user.getPassword());
-		
-		scanner.close();
+
+        String initialPass = scanner.nextLine();
+        
+        String newPass = scanner.nextLine();
+
+        User2 user = new User2(initialPass);
+
+        user.setPassword(newPass);
+
+        System.out.println(user.getPassword());
+        
+        scanner.close();
 	}
 }
