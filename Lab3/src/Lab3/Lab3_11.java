@@ -13,7 +13,7 @@ class SystemConfig {
     }
 	
 	public static SystemConfig getInstance() {
-		if (instance == null) {
+		if (instance == null ) {
             instance = new SystemConfig();
         }
 		return instance;
